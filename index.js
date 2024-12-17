@@ -3,6 +3,7 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const result = document.getElementById("result");
 const message = document.getElementById("message");
+const hider = document.getElementById("hider");
 
 const choices = ["rock", "paper", "scissors"];
 
@@ -32,6 +33,8 @@ function play(event) {
   } else if (computerChoice === "scissors" && userChoice === "paper") {
     result.innerHTML = "You lose!";
   }
+  hider.classList.remove("d-none");
+
 }
 
 rock.addEventListener("click", play);
